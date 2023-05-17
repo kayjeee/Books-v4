@@ -153,13 +153,6 @@ nav {
   padding-left: 0;
 }
 
-.title {
-  font-size: 36px;
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
-
 .container {
   align-items: center;
   display: flex;
@@ -213,31 +206,90 @@ button {
   text-shadow: 0.5px 0.5px black;
 }
 
+.bookItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
 #bookList {
   border: 1px solid black;
-  border-collapse: collapse;
   color: #333;
   font-family: Arial, sans-serif;
   font-size: 16px;
   width: 100%;
 }
 
-#bookList th {
-  background-color: #f2f2f2;
-  padding: 10px;
-  text-align: left;
-}
-
-#bookList tr {
+#bookList .bookItem {
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid #ddd;
-}
-
-#bookList tr:nth-child(odd) {
-  background-color: #f9f9f9;
-}
-
-#bookList td {
   padding: 10px;
+}
+
+#bookList .bookItem button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#bookList .bookItem button:hover {
+  color: red;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.bookInfo {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+  color: blue;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+  color: blue;
+}
+
+.removeBtn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.removeBtn:hover {
+  background-color: #ddd;
+  color: red;
 }
 
 #myForm {
@@ -388,12 +440,4 @@ h1 {
 input[type="text"] {
   padding: 5px;
   margin-right: 10px;
-}
-
-.bookItem {
-  margin-bottom: 5px;
-}
-
-.bookItem button {
-  margin-left: 10px;
 }

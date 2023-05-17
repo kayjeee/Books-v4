@@ -14,7 +14,12 @@ class Book {
     this.books.forEach((book, index) => {
       const bookItem = document.createElement('div');
       bookItem.classList.add('bookItem');
-      bookItem.innerHTML = `<strong>Title:</strong> ${book.title}, <strong>Author:</strong> ${book.author}`;
+      bookItem.innerHTML = `
+      <div class="bookInfo">
+        <div class="title">${book.title}</div><strong>by:</strong>
+        <div class="author"> ${book.author}</div>
+      </div>
+    `;
 
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Remove';
@@ -60,13 +65,13 @@ class Book {
 }
 
 // Create a new instance of the Book class
-const myLibrary = new Book();
+const myLib = new Book();
 
 // Event listener for the Add button
 const addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click', () => {
-  myLibrary.addBook();
+  myLib.addBook();
 });
 
 // Display the books initially
-myLibrary.displayBooks();
+myLib.displayBooks();
