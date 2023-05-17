@@ -1,59 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="custom-header">
-      <div class="header-content">
-        <h2>Awesome Books</h2>
-        <nav>
-          <ul>
-            <li class="home-boet-nav">List</li>
-            <li class="books-boet-nav">Add new</li>
-            <li class="contact-boet-nav">Contacts</li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome books</title>
+  <link rel="styleSheet" href="style.css">
+</head>
+
+<body>
+  <div class="custom-header">
+  <div class="header-content">
+    <h2>Awesome Books</h2>
+    <nav>
+      <ul>
+        <li class="home-boet-nav">List</li>
+        <li class="books-boet-nav">Add new</li>
+        <li class="contact-boet-nav">Contacts</li>
+      </ul>
+    </nav>
+  </div>
+</div>
+  
+  <div id="time" class="time"></div>
+
+    <main >
+    <div class="huis">
+      <h1 class="title">All awesome books</h1>
+      <div class="tableContainer">
+        <table id="bookList">
+          <div>
+          <tbody class="containerh1">
+          </div>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <div id="time" class="time"></div>
-
-    <main>
-        <div class="container">
-    <h1>Book Collection</h1>
-    <div class="form-container">
-      <input type="text" id="title" placeholder="Title">
-      <input type="text" id="author" placeholder="Author">
-      <button id="addBtn">Add</button>
+    <div>
+    <div class="dibooks">
+      <h2 class="title">Add a new book</h2>
+      <form action="" id="myForm">
+        <input type="text" id="bookTitle" class="bookTitle" placeholder="Title"><br>
+        <input type="text" id="authorName" class="authorName" placeholder="Author"><br>
+        <div class="khCont">
+          <button id="addBook">Add</button>
+        </div>
+      </form>
     </div>
-    <div id="bookList"></div>
   </div>
 
-      <div class="dicontacts">
-        <h2 class="title">Contact Information</h2>
-        <p>
-          Do you have any questions or just want to say "Hello"?<br />
-          You can reach out to us!
-        </p>
-        <ul>
-          <li>Our email: mailto@mail.com</li>
-          <li>Our phone number: +243xxxxxx987</li>
-          <li>Our address: StreetName 22, 128964 City, Country</li>
-        </ul>
-      </div>
-    </main>
+    <div class="dicontacts">
+      <h2 class="title"> Contact Information</h2>
+      <p>Do you have any question or you just want to say "Hello"?<br>
+        You can reach out to us!</p>
+      <ul>
+        <li>Our email: mailto@mail.com</li>
+        <li>Our phone number: +243xxxxxx987</li>
+        <li>Our address : StreetName 22, 128964 City, Country</li>
+      </ul>
+    </div>
+  </main>
+  
+  
 
-    <footer class="F-container">
-      <div class="F-title-container">
-        <h2 class="F-title">Copyright</h2>
-      </div>
-    </footer>
+  
+  <footer class="F-container">
+    <div class="F-title-container">
+      <h2 class="F-title">Copyright</h2>
+    </div>
+  </footer>
+  
+  <script src="index.js"></script>
+  
+</body>
 
-    <script src="index.js"></script>
-  </body>
 </html>

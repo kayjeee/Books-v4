@@ -3,8 +3,9 @@
 }
 
 body {
-  height: 90vh;
-  padding: 0 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .dicontacts li {
@@ -110,7 +111,7 @@ nav {
   justify-content: flex-end;
   margin: 6px;
   margin-top: -15px;
-  margin-right: 35px;
+  margin-right: 135px;
 }
 
 .huis {
@@ -184,8 +185,10 @@ nav {
 
 .tableRow {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
 button {
@@ -377,9 +380,12 @@ button {
   color: #333;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: auto; /* Stick to the bottom */
   padding: 10px;
   width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 .F-title-container {
